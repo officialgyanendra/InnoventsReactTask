@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './App.css';
 
 const App = () => {
     const [hotelRooms, setHotelRooms] = useState(1);
@@ -128,12 +129,19 @@ const App = () => {
         <div className="App">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-4" style={{ margin: '30px auto' }}>
+                <div className="title">
+                    <i className="fa fa-users" aria-hidden="true"></i>
+                    <h3>Choose number of <strong>people</strong></h3>
+                </div>
+                    <div className="col-md-4" style={{ margin: '7px auto' }}>
                         <div className="card">
                             <div className="card-body">
                                 <div className="list-group">
                                     <div className="list-group-item">
-                                        <h3>Room</h3>
+                                        <div className="list-group-content">
+                                            <i className="fa fa-bed" aria-hidden="true"></i>
+                                            <h3>Room</h3>
+                                        </div>
                                         <div className="list-group-input">
                                             <button
                                                 className="action-btn minus"
@@ -153,7 +161,10 @@ const App = () => {
                                         </div>
                                     </div>
                                     <div className="list-group-item">
-                                        <h3>Adults</h3>
+                                        <div className="list-group-content">
+                                            <i className="fa fa-user" aria-hidden="true"></i>
+                                            <h3>Adults</h3>
+                                        </div>
                                         <div className="list-group-input">
                                             <button
                                                 className="action-btn minus"
@@ -175,8 +186,8 @@ const App = () => {
                                         </div>
                                     </div>
                                     <div className="list-group-item">
-                                        <div>
-                                            <i class="fa fa-child" aria-hidden="true"></i>
+                                        <div className="list-group-content">
+                                            <i className="fa fa-child" aria-hidden="true"></i>
                                             <h3>Children</h3>
                                         </div>
                                         <div className="list-group-input">
